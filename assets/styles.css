@@ -1,63 +1,224 @@
-/* Grunnleggende stiler for mobile enheter */
+/* Grunnleggende stiler for mobile enheter (mobile-først) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f4f8; /* Lys blå-grå bakgrunn */
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
   background-color: #333;
-  color: white;
   padding: 10px;
+  text-align: center;
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 nav ul li {
   display: inline-block;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
+/* Main-innhold */
 main {
   padding: 20px;
 }
 
+/* Seksjoner */
 section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Sentrer alle overskrifter og avsnitt for enkelte seksjoner */
+h1, h2, h3, p {
+  text-align: center;
+}
+
+/* Bilder */
+.intro-image,
+.menu-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Meny-elementer */
+#menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #e9e9e9;
+  padding: 15px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.menu-item h3 {
+  margin: 10px 0 5px;
+}
+
+.menu-item p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.menu-item button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.menu-item button:hover {
+  background-color: #555;
+}
+
+/* Bestillingsskjema: Forbedret utseende for "Din bestilling" */
+#order {
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #cce5ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin-bottom: 20px;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
+#order h2 {
+  color: #0056b3;
 }
 
-/* Stiler for større skjermer */
+#order-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+#order-list li {
+  background-color: #e0ffe0;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#order-list button {
+  background-color: #ff4d4d;
+  border: none;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#order-list button:hover {
+  background-color: #e60000;
+}
+
+#submit-order {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#submit-order:hover {
+  background-color: #555;
+}
+
+/* Footer-stiler */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 10px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Sentrer kontaktinformasjonen eksplisitt */
+.footer-content .contact-info {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-content .contact-info p {
+  margin: 5px 0;
+}
+
+.footer-content .map-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+}
+
+/* Mediespørringer for større skjermer */
 @media (min-width: 768px) {
   nav ul {
     display: flex;
     justify-content: center;
   }
-
-  nav ul li {
-    margin-right: 20px;
-  }
-
   main {
-    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  section {
+    margin-bottom: 30px;
+  }
+  #menu-container {
     justify-content: space-between;
   }
-
-  section {
-    width: 30%;
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .footer-content .contact-info,
+  .footer-content .map-container {
+    flex: 1;
+    margin: 10px;
   }
 }

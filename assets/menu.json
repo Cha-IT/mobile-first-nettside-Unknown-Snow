@@ -1,5 +1,37 @@
 [
-  { "id": 1, "name": "Kaffekopp", "price": 25 },
-  { "id": 2, "name": "Smørbrød", "price": 50 },
-  { "id": 3, "name": "Kake", "price": 40 }
+  {
+    "id": 1,
+    "name": "Kaffekopp",
+    "price": 25,
+    "img": "images/kaffekopp.jpg",
+    "description": "Vår ferskbrente kaffe servert i en klassisk kopp."
+  },
+  {
+    "id": 2,
+    "name": "Smørbrød med ost og skinke",
+    "price": 50,
+    "img": "images/smorbrod.jpg",
+    "description": "Nystekt brød med ost, skinke og frisk salat."
+  },
+  {
+    "id": 3,
+    "name": "Hjemmelaget Kake",
+    "price": 40,
+    "img": "images/kake.jpg",
+    "description": "En deilig kake med smak av vanilje og ferske bær."
+  },
+  {
+    "id": 4,
+    "name": "Sandwich",
+    "price": 35,
+    "img": "images/sandwich.jpg",
+    "description": "Frisk sandwich med kylling, avocado og grønnsaker."
+  },
+  {
+    "id": 5,
+    "name": "Smoothie",
+    "price": 30,
+    "img": "images/smoothie.jpg",
+    "description": "En sunn og frisk fruktsmoothie, perfekt for en oppkvikker."
+  }
 ]
